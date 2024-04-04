@@ -7,6 +7,13 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var _animated_sprite = $AnimatedSprite2D
+
+func _process(_delta):
+	if Input.is_action_pressed("ui_right"):
+		_animated_sprite.play("run")
+	else:
+		_animated_sprite.stop()
 
 func _physics_process(delta):
 	# Add the gravity.

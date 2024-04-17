@@ -1,8 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://c7rm6188iaibp"]
+[gd_scene load_steps=20 format=3 uid="uid://c7rm6188iaibp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_8i8qs"]
 [ext_resource type="Texture2D" uid="uid://7twr1xs37au2" path="res://assets/prone_right_0.png" id="2_843v6"]
+[ext_resource type="Texture2D" uid="uid://d6jibvs03kko" path="res://assets/jump_left_0.png" id="2_pusho"]
 [ext_resource type="Texture2D" uid="uid://81hqobf5mdfd" path="res://assets/walk_left_1_0.png" id="2_sv5a7"]
+[ext_resource type="Texture2D" uid="uid://df1h68ab2t558" path="res://assets/jump_right_0.png" id="3_pcly3"]
 [ext_resource type="Texture2D" uid="uid://bo0nmx3l8ed83" path="res://assets/walk_left_1_1.png" id="3_x2pbr"]
 [ext_resource type="Texture2D" uid="uid://dt5yjbnbel3be" path="res://assets/walk_left_1_2.png" id="4_vqj0s"]
 [ext_resource type="Texture2D" uid="uid://cwnu3q8lccgjx" path="res://assets/walk_left_1_3.png" id="5_hxsga"]
@@ -25,6 +27,22 @@ load_path = "res://.godot/imported/prone_left_0.png-77f74dc53f850c1e3a335d7d1311
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_pusho")
+}],
+"loop": true,
+"name": &"jump_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pcly3")
+}],
+"loop": true,
+"name": &"jump_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("CompressedTexture2D_703yw")
 }],
 "loop": true,
@@ -37,6 +55,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"prone_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tfwjp")
+}],
+"loop": true,
+"name": &"stand_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_1v41j")
+}],
+"loop": true,
+"name": &"stand_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -56,7 +90,7 @@ animations = [{
 "texture": ExtResource("6_bvmgm")
 }],
 "loop": true,
-"name": &"run_left",
+"name": &"walk_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -76,23 +110,7 @@ animations = [{
 "texture": ExtResource("11_iu7ta")
 }],
 "loop": true,
-"name": &"run_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_tfwjp")
-}],
-"loop": true,
-"name": &"stand_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_1v41j")
-}],
-"loop": true,
-"name": &"stand_right",
+"name": &"walk_right",
 "speed": 5.0
 }]
 
@@ -110,4 +128,4 @@ zoom = Vector2(2, 2)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -40)
 sprite_frames = SubResource("SpriteFrames_ifie5")
-animation = &"prone_right"
+animation = &"jump_right"

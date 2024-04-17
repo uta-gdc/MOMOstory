@@ -1,24 +1,44 @@
-[gd_scene load_steps=16 format=3 uid="uid://c7rm6188iaibp"]
+[gd_scene load_steps=18 format=3 uid="uid://c7rm6188iaibp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_8i8qs"]
-[ext_resource type="Texture2D" uid="uid://81hqobf5mdfd" path="res://assets/left_walk_1_0.png" id="2_sv5a7"]
-[ext_resource type="Texture2D" uid="uid://bo0nmx3l8ed83" path="res://assets/left_walk_1_1.png" id="3_x2pbr"]
-[ext_resource type="Texture2D" uid="uid://dt5yjbnbel3be" path="res://assets/left_walk_1_2.png" id="4_vqj0s"]
-[ext_resource type="Texture2D" uid="uid://cwnu3q8lccgjx" path="res://assets/left_walk_1_3.png" id="5_hxsga"]
-[ext_resource type="Texture2D" uid="uid://dohnp5g8mey0w" path="res://assets/left_walk_1_4.png" id="6_bvmgm"]
-[ext_resource type="Texture2D" uid="uid://dylk4eoe0um16" path="res://assets/right_walk_1_0.png" id="7_o82kp"]
-[ext_resource type="Texture2D" uid="uid://bwy23xn74fdx1" path="res://assets/left_stand_1_0.png" id="7_tfwjp"]
-[ext_resource type="Texture2D" uid="uid://btkgsmjh20k4r" path="res://assets/right_walk_1_1.png" id="8_1d2wc"]
-[ext_resource type="Texture2D" uid="uid://cdho63ch5qbq0" path="res://assets/right_walk_1_2.png" id="9_0jtua"]
-[ext_resource type="Texture2D" uid="uid://dp018vsy1f2db" path="res://assets/right_walk_1_3.png" id="10_gsi02"]
-[ext_resource type="Texture2D" uid="uid://mkmw4afjbbtc" path="res://assets/right_walk_1_4.png" id="11_iu7ta"]
-[ext_resource type="Texture2D" uid="uid://ck7xqlkna38y8" path="res://assets/right_stand_1_0.png" id="13_1v41j"]
+[ext_resource type="Texture2D" uid="uid://7twr1xs37au2" path="res://assets/prone_right_0.png" id="2_843v6"]
+[ext_resource type="Texture2D" uid="uid://81hqobf5mdfd" path="res://assets/walk_left_1_0.png" id="2_sv5a7"]
+[ext_resource type="Texture2D" uid="uid://bo0nmx3l8ed83" path="res://assets/walk_left_1_1.png" id="3_x2pbr"]
+[ext_resource type="Texture2D" uid="uid://dt5yjbnbel3be" path="res://assets/walk_left_1_2.png" id="4_vqj0s"]
+[ext_resource type="Texture2D" uid="uid://cwnu3q8lccgjx" path="res://assets/walk_left_1_3.png" id="5_hxsga"]
+[ext_resource type="Texture2D" uid="uid://dohnp5g8mey0w" path="res://assets/walk_left_1_4.png" id="6_bvmgm"]
+[ext_resource type="Texture2D" uid="uid://dylk4eoe0um16" path="res://assets/walk_right_1_0.png" id="7_o82kp"]
+[ext_resource type="Texture2D" uid="uid://bwy23xn74fdx1" path="res://assets/stand_left_1_0.png" id="7_tfwjp"]
+[ext_resource type="Texture2D" uid="uid://btkgsmjh20k4r" path="res://assets/walk_right_1_1.png" id="8_1d2wc"]
+[ext_resource type="Texture2D" uid="uid://cdho63ch5qbq0" path="res://assets/walk_right_1_2.png" id="9_0jtua"]
+[ext_resource type="Texture2D" uid="uid://dp018vsy1f2db" path="res://assets/walk_right_1_3.png" id="10_gsi02"]
+[ext_resource type="Texture2D" uid="uid://mkmw4afjbbtc" path="res://assets/walk_right_1_4.png" id="11_iu7ta"]
+[ext_resource type="Texture2D" uid="uid://ck7xqlkna38y8" path="res://assets/stand_right_1_0.png" id="13_1v41j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsrur"]
 size = Vector2(20, 60)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_703yw"]
+load_path = "res://.godot/imported/prone_left_0.png-77f74dc53f850c1e3a335d7d1311dc05.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ifie5"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_703yw")
+}],
+"loop": true,
+"name": &"prone_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_843v6")
+}],
+"loop": true,
+"name": &"prone_right",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_sv5a7")
@@ -36,15 +56,7 @@ animations = [{
 "texture": ExtResource("6_bvmgm")
 }],
 "loop": true,
-"name": &"left_run",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_tfwjp")
-}],
-"loop": true,
-"name": &"left_stand",
+"name": &"run_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -64,7 +76,15 @@ animations = [{
 "texture": ExtResource("11_iu7ta")
 }],
 "loop": true,
-"name": &"right_run",
+"name": &"run_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tfwjp")
+}],
+"loop": true,
+"name": &"stand_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -72,7 +92,7 @@ animations = [{
 "texture": ExtResource("13_1v41j")
 }],
 "loop": true,
-"name": &"right_stand",
+"name": &"stand_right",
 "speed": 5.0
 }]
 
@@ -90,4 +110,4 @@ zoom = Vector2(2, 2)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -40)
 sprite_frames = SubResource("SpriteFrames_ifie5")
-animation = &"left_run"
+animation = &"prone_right"

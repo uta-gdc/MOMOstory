@@ -12,16 +12,21 @@ var direction = 0
 func _process(_delta):
 	if Input.is_action_pressed("ui_right"):
 		direction = Input.get_axis("ui_left", "ui_right")
-		_animated_sprite.play("right_run")
+		_animated_sprite.play("run_right")
 	elif Input.is_action_pressed("ui_left"):
 		direction = Input.get_axis("ui_left", "ui_right")
-		_animated_sprite.play("left_run")
+		_animated_sprite.play("run_left")
+	elif Input.is_action_pressed("ui_down"):
+		if(direction > 0):
+			_animated_sprite.play("prone_right")
+		else:
+			_animated_sprite.play("prone_left")
 	else:
 		print(direction)
 		if(direction > 0):
-			_animated_sprite.play("right_stand")
+			_animated_sprite.play("stand_right")
 		else:
-			_animated_sprite.play("left_stand")
+			_animated_sprite.play("stand_left")
 		
 # broken code for exercise		
 #func _process(_delta):

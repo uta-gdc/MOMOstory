@@ -8,21 +8,20 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var _animated_sprite = $AnimatedSprite2D
-
+var direction = 0
 func _process(_delta):
 	if Input.is_action_pressed("ui_right"):
+		direction = Input.get_axis("ui_left", "ui_right")
 		_animated_sprite.play("right_run")
 	elif Input.is_action_pressed("ui_left"):
+		direction = Input.get_axis("ui_left", "ui_right")
 		_animated_sprite.play("left_run")
 	else:
-		_animated_sprite.stop()
-	
-	if Input.is_action_just_released("ui_right"):
-		_animated_sprite.play("right_stand")
-	
-	if Input.is_action_just_released("ui_left"):
-		_animated_sprite.play("left_stand")
-	
+		print(direction)
+		if(direction > 0):
+			_animated_sprite.play("right_stand")
+		else:
+			_animated_sprite.play("left_stand")
 
 func _physics_process(delta):
 	# Add the gravity.

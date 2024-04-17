@@ -90,4 +90,4 @@ zoom = Vector2(2, 2)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -40)
 sprite_frames = SubResource("SpriteFrames_ifie5")
-animation = &"right_stand"
+animation = &"left_run"

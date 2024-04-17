@@ -22,6 +22,22 @@ func _process(_delta):
 			_animated_sprite.play("right_stand")
 		else:
 			_animated_sprite.play("left_stand")
+		
+# broken code for exercise		
+#func _process(_delta):
+	#if Input.is_action_pressed("ui_right"):
+		#_animated_sprite.play("right_run")
+	#elif Input.is_action_pressed("ui_left"):
+		#_animated_sprite.play("left_run")
+	#else:
+		#_animated_sprite.stop()
+	#
+	#if Input.is_action_just_released("ui_right"):
+		#_animated_sprite.play("right_stand")
+	#
+	#if Input.is_action_just_released("ui_left"):
+		#_animated_sprite.play("left_stand")
+	
 
 func _physics_process(delta):
 	# Add the gravity.

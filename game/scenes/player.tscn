@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c7rm6188iaibp"]
+[gd_scene load_steps=35 format=3 uid="uid://c7rm6188iaibp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_8i8qs"]
 [ext_resource type="Texture2D" uid="uid://7twr1xs37au2" path="res://assets/prone_right_0.png" id="2_843v6"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bo0nmx3l8ed83" path="res://assets/walk_left_1_1.png" id="3_x2pbr"]
 [ext_resource type="Texture2D" uid="uid://dt5yjbnbel3be" path="res://assets/walk_left_1_2.png" id="4_vqj0s"]
 [ext_resource type="Texture2D" uid="uid://cwnu3q8lccgjx" path="res://assets/walk_left_1_3.png" id="5_hxsga"]
-[ext_resource type="Texture2D" uid="uid://dohnp5g8mey0w" path="res://assets/walk_left_1_4.png" id="6_bvmgm"]
 [ext_resource type="Texture2D" uid="uid://hpjddlkuwhql" path="res://assets/swing_left_O1_0.png" id="7_15mtt"]
 [ext_resource type="Texture2D" uid="uid://dylk4eoe0um16" path="res://assets/walk_right_1_0.png" id="7_o82kp"]
 [ext_resource type="Texture2D" uid="uid://bwy23xn74fdx1" path="res://assets/stand_left_1_0.png" id="7_tfwjp"]
@@ -19,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://delmbud11a8a4" path="res://assets/swing_left_O1_3.png" id="10_5fb4f"]
 [ext_resource type="Texture2D" uid="uid://dp018vsy1f2db" path="res://assets/walk_right_1_3.png" id="10_gsi02"]
 [ext_resource type="Texture2D" uid="uid://c158im0o58idu" path="res://assets/swing_left_O2_0.png" id="11_3rabw"]
-[ext_resource type="Texture2D" uid="uid://mkmw4afjbbtc" path="res://assets/walk_right_1_4.png" id="11_iu7ta"]
 [ext_resource type="Texture2D" uid="uid://sbuvotbsic5q" path="res://assets/swing_left_O2_1.png" id="12_fves1"]
 [ext_resource type="Texture2D" uid="uid://ck7xqlkna38y8" path="res://assets/stand_right_1_0.png" id="13_1v41j"]
 [ext_resource type="Texture2D" uid="uid://bi242y4tupxnn" path="res://assets/swing_left_O2_2.png" id="13_448im"]
@@ -173,13 +171,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_hxsga")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_bvmgm")
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -193,13 +188,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_gsi02")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_iu7ta")
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -216,4 +208,4 @@ zoom = Vector2(3, 3)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -40)
 sprite_frames = SubResource("SpriteFrames_ifie5")
-animation = &"swing_left_O2"
+animation = &"walk_right"

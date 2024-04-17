@@ -10,7 +10,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var _animated_sprite = $AnimatedSprite2D
 var direction = 0
 func _process(_delta):
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
+		_animated_sprite.stop()
+	elif Input.is_action_pressed("ui_right"):
 		direction = Input.get_axis("ui_left", "ui_right")
 		_animated_sprite.play("walk_right")
 		if Input.is_action_pressed("ui_accept") and (is_on_floor()==false):

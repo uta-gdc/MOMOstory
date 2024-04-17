@@ -28,11 +28,19 @@ func _process(_delta):
 		if(direction > 0):
 			if Input.is_action_pressed("ui_down"):
 				_animated_sprite.play("prone_right")
+			elif Input.is_action_pressed("ui_accept"):
+				_animated_sprite.play("jump_right")
+			elif Input.is_action_pressed("ui_cancel"):
+				_animated_sprite.play("swing_left_O1")
 			else:
 				_animated_sprite.play("stand_right")
 		else:
 			if Input.is_action_pressed("ui_down"):
 				_animated_sprite.play("prone_left")
+			elif Input.is_action_pressed("ui_accept") and (is_on_floor()==false):
+				_animated_sprite.play("jump_left")
+			elif Input.is_action_pressed("ui_cancel"):
+				_animated_sprite.play("swing_left_O1")
 			else:
 				_animated_sprite.play("stand_left")
 		

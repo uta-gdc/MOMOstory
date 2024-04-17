@@ -9,14 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://dt5yjbnbel3be" path="res://assets/walk_left_1_2.png" id="4_vqj0s"]
 [ext_resource type="Texture2D" uid="uid://cwnu3q8lccgjx" path="res://assets/walk_left_1_3.png" id="5_hxsga"]
 [ext_resource type="Texture2D" uid="uid://dohnp5g8mey0w" path="res://assets/walk_left_1_4.png" id="6_bvmgm"]
-[ext_resource type="Texture2D" uid="uid://4mh6jcbhebng" path="res://assets/swing_left_O1_0.png" id="7_15mtt"]
+[ext_resource type="Texture2D" uid="uid://hpjddlkuwhql" path="res://assets/swing_left_O1_0.png" id="7_15mtt"]
 [ext_resource type="Texture2D" uid="uid://dylk4eoe0um16" path="res://assets/walk_right_1_0.png" id="7_o82kp"]
 [ext_resource type="Texture2D" uid="uid://bwy23xn74fdx1" path="res://assets/stand_left_1_0.png" id="7_tfwjp"]
 [ext_resource type="Texture2D" uid="uid://btkgsmjh20k4r" path="res://assets/walk_right_1_1.png" id="8_1d2wc"]
-[ext_resource type="Texture2D" uid="uid://up1q87n1edsb" path="res://assets/swing_left_O1_1.png" id="8_6itj5"]
+[ext_resource type="Texture2D" uid="uid://cfk8lq0ld1xk5" path="res://assets/swing_left_O1_1.png" id="8_6itj5"]
 [ext_resource type="Texture2D" uid="uid://cdho63ch5qbq0" path="res://assets/walk_right_1_2.png" id="9_0jtua"]
-[ext_resource type="Texture2D" uid="uid://blynenm06aqpl" path="res://assets/swing_left_O1_2.png" id="9_afia7"]
-[ext_resource type="Texture2D" uid="uid://di1qd8jyo3dop" path="res://assets/swing_left_O1_3.png" id="10_5fb4f"]
+[ext_resource type="Texture2D" uid="uid://dmj7t28jyr08u" path="res://assets/swing_left_O1_2.png" id="9_afia7"]
+[ext_resource type="Texture2D" uid="uid://delmbud11a8a4" path="res://assets/swing_left_O1_3.png" id="10_5fb4f"]
 [ext_resource type="Texture2D" uid="uid://dp018vsy1f2db" path="res://assets/walk_right_1_3.png" id="10_gsi02"]
 [ext_resource type="Texture2D" uid="uid://c158im0o58idu" path="res://assets/swing_left_O2_0.png" id="11_3rabw"]
 [ext_resource type="Texture2D" uid="uid://mkmw4afjbbtc" path="res://assets/walk_right_1_4.png" id="11_iu7ta"]
@@ -210,10 +210,10 @@ position = Vector2(0, -33)
 shape = SubResource("RectangleShape2D_nsrur")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, -105)
-zoom = Vector2(2, 2)
+position = Vector2(3, -81)
+zoom = Vector2(3, 3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -40)
 sprite_frames = SubResource("SpriteFrames_ifie5")
-animation = &"swing_left_OF"
+animation = &"swing_left_O2"

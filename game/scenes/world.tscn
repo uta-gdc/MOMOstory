@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3b7qtgkvxjxu"]
+[gd_scene load_steps=16 format=3 uid="uid://d3b7qtgkvxjxu"]
 
 [ext_resource type="PackedScene" uid="uid://c7rm6188iaibp" path="res://scenes/player.tscn" id="1_634a0"]
 [ext_resource type="Texture2D" uid="uid://yf6fqf4eq4jv" path="res://assets/The Hill North of Henesys.png" id="2_cutjo"]
@@ -33,7 +33,10 @@ size = Vector2(1036, 29)
 size = Vector2(857.5, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed8qk"]
-size = Vector2(3.5, 539)
+size = Vector2(5, 519)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jvpjm"]
+b = Vector2(63, -140)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_na6bg"]
 size = Vector2(26, 612)
@@ -125,8 +128,14 @@ shape = SubResource("RectangleShape2D_ybsj0")
 [node name="StaticBody2D8" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
-position = Vector2(1463.25, 613.5)
+position = Vector2(1462.5, 623.5)
 shape = SubResource("RectangleShape2D_ed8qk")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
+position = Vector2(1426, 423)
+shape = SubResource("SegmentShape2D_jvpjm")
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="."]
 

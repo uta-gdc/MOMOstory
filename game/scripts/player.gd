@@ -1,3 +1,9 @@
+# author: deityvivi
+# co-author: cents808
+# co-author: srikeethis
+# co-author: scifii_official
+
+
 extends CharacterBody2D
 
 
@@ -10,9 +16,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var _animated_sprite = $AnimatedSprite2D
 var direction = 0
 func _process(_delta):
-	if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
-		_animated_sprite.stop()
-	elif Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right"):
 		direction = Input.get_axis("ui_left", "ui_right")
 		_animated_sprite.play("walk_right")
 		if Input.is_action_pressed("ui_accept") and (is_on_floor()==false):
@@ -33,7 +37,7 @@ func _process(_delta):
 			elif Input.is_action_pressed("ui_accept"):
 				_animated_sprite.play("jump_right")
 			elif Input.is_action_pressed("ui_cancel"):
-				_animated_sprite.play("swing_left_O1")
+				_animated_sprite.play("swing_right_O1")
 			else:
 				_animated_sprite.play("stand_right")
 		else:
@@ -45,21 +49,7 @@ func _process(_delta):
 				_animated_sprite.play("swing_left_O1")
 			else:
 				_animated_sprite.play("stand_left")
-		
-# broken code for exercise		
-#func _process(_delta):
-	#if Input.is_action_pressed("ui_right"):
-		#_animated_sprite.play("right_run")
-	#elif Input.is_action_pressed("ui_left"):
-		#_animated_sprite.play("left_run")
-	#else:
-		#_animated_sprite.stop()
-	#
-	#if Input.is_action_just_released("ui_right"):
-		#_animated_sprite.play("right_stand")
-	#
-	#if Input.is_action_just_released("ui_left"):
-		#_animated_sprite.play("left_stand")
+	
 	
 
 func _physics_process(delta):
